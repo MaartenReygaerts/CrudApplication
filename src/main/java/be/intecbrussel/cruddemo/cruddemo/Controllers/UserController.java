@@ -2,6 +2,7 @@ package be.intecbrussel.cruddemo.cruddemo.Controllers;
 
 import be.intecbrussel.cruddemo.cruddemo.entities.User;
 import be.intecbrussel.cruddemo.cruddemo.repositories.userRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -14,6 +15,7 @@ import javax.validation.Valid;
 @Controller
 public class UserController {
 
+    @Autowired
     private userRepository repo;
 
     @GetMapping("/signup")
